@@ -9,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
   //   template:`<app-server></app-server>
   // <app-server></app-server>`,
 
-  styleUrls: ['./servers.component.css']
+  // styleUrls: ['./servers.component.css']
+  styles: [`
+  .white{
+    color:white;
+  }`]
 })
+
 export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
   serverCreationStatus: string = "No server was created";
   serverName: string = ''
+  serverCreated: boolean = false;
+  // servers: Array = ['test Server', 'test server2'];
+  log = [];
 
   constructor() {
     setTimeout(() => {
@@ -23,6 +31,9 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+    this.log.push(new Date())
+    // this.servers.push(this.serverName);
+    this.serverCreated = true;
     this.serverCreationStatus = "Server was created! Name is " + this.serverName;
   }
 

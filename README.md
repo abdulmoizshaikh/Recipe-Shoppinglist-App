@@ -107,5 +107,37 @@ function handler name start with on make sence that it is the event binding hand
  
 Directives are Intructions in the DOM!
 
+### Template Directives
+
 e.g
-@Components are kind of instructions in the DOM Instructing angular to add the  content of comp template and business login in typescript code in this place where we use the selector these are directives but directive with a template
+1. @Components are kind of instructions in the DOM Instructing angular to add the  content of comp template and business login in typescript code in this place where we use the selector these are directives but directive with a 
+
+### 2. Structural Directives (that starts with *)
+
+1. ngIf 
+2. ngFor
+
+e.g `<p *ngIf="serverCreated">Server was created server name is {{serverName}}</p>` here server created is a bool value or variable
+
+else case in *ngIf
+`<p *ngIf="serverCreated; else noServer" >Server was created server name is {{serverName}}</p><ng-template#noServer><p>No server was created!</p></ng-template>`
+
+*ngFor is also a structural directives which loop through array of element 
+e.g `<app-server *ngFor="let server of servers"></app-server>` here servers is array 
+
+e.g of ngFor with index
+`<div *ngFor="let logItem of log; let i=index" [ngStyle]="{backgroundColor:i>=4?'blue':'yellow'}"    [ngClass]="{'white':i>=4}">{{logItem}}</div>`
+
+### 3. Attribut Directives
+
+there are 2 attribute directives
+1. ngStyle  2. ngClass
+
+`<p [ngStyle]="{background:getColor()}">{{'Server'}Idis {{serverId}} and status is {{getServerStatus()}</p>`
+
+here `ngStyle` is attribut directive which allow us to dynamically assign styles
+
+similar `ngClass` allow us to dynamically add or remove css classes ngClass objects has key value pairs key are the class name and values are conditions where this class should be attach or not 
+
+
+e.g `[ngClass]="{online:serverStatus==='online' }"` these are also added like property binding but in javascript objects on the right hand side 
