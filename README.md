@@ -37,7 +37,20 @@ Run `ng serve --open` to compile and open your project automatically in the brow
 
 ## Generate your component by cli using command line
 
-Run `ng generate component comp-name` to generate folder of component with necessary component files this will create folder in your app folder by default.
+Run `ng generate component comp-name` to generate folder of component with necessary component files this will create folder in your app folder by default and through manually you have to import and add in app.module.ts declaration but through cmd line its add automatically into app.module file
 
 Run `ng g c comp-name` through shortcut command which do the same as above command.
 
+
+## Angular Concepts
+ 
+You have to add template in your component either is inline template or external using templateURL but you have atleast one type type of template in your component on the other hand selector and styleURLs dont have to be present in order to run or compile component they are optional
+
+here in styleUrls: ['./app.component.css'] it takes array of styles so that's now we can add multiple styles in stylesURL array separated by commas
+
+Selector name must be unique for a component so it can not override other file etc
+
+Selectors are not limited to select by element name but selector can be just like in css you can select element by attribut so selector can be select by attribute 
+
+selector:'app-server'           this is the example of selector by element name
+selector:'[app-server]'         this is the example of selector by attribute name
