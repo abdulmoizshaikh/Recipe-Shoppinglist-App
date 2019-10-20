@@ -53,4 +53,10 @@ Selector name must be unique for a component so it can not override other file e
 Selectors are not limited to select by element name but selector can be just like in css you can select element by attribut so selector can be select by attribute 
 
 selector:'app-server'           this is the example of selector by element name
+
 selector:'[app-server]'         this is the example of selector by attribute name
+<!-- <div app-servers></div> -->
+ 
+  
+selector: '.app-servers', //select by class name
+<div class="app-servers"></div>
