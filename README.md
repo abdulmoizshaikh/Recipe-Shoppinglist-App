@@ -78,16 +78,34 @@ the communication between your typescript code (Business Login) and your templat
 2. Property Binding `([property]="data")`
 
 e.g here disable is bind through property binding that get update dynamically on the bases of allowNewServer boolean value
-<button class="btn btn-primary" 
-[disabled]="!allowNewServer">Add Server
-</button>
+`<button class="btn btn-primary" [disabled="!allowNewServer">Add Server</button>`
 
 ## For React to user Events We use
 
 3. Event Binding `((event)="expression")`
 means execute code when ever event like onClick occurs
 
+e.g of click event binding
+`<button class="btn btn-primary" [disabled]="!allowNewServer"(click)="onCreateServer()">Add Server</button>`
+
+passing Data in Event Binding function using `$event` ($event will simply be the data emitted with that event)
+e.g of click event binding with data getting in function params
+`<input type="text" class="form-control" (input)="onUpdateServerName($event)">`
+here input event provide by DOM and it gives some data when emit this "input event" 
+
 ## Additional form of data Binding where we combine both the directions 
 
-4. Two-Way-Binding `([ngModel]="data")`
+4. Two-Way-Binding `([(ngModel)]="data")`
 where we are able to react events and output somethings at the same time
+
+e.g: `<input type="text" class="form-control" [(ngModel)]="serverName">`
+in order to use ngModel in our component we have to import FormsModule from @angular/forms and added into imports array in app.module.ts file
+
+function handler name start with on make sence that it is the event binding hander like onChangeHandler so best practice is to start these function name with "on"
+
+## Directives
+ 
+Directives are Intructions in the DOM!
+
+e.g
+@Components are kind of instructions in the DOM Instructing angular to add the  content of comp template and business login in typescript code in this place where we use the selector these are directives but directive with a template
