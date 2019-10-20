@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-##few Usefull commands to know in angular
+## Few Usefull commands to know in angular
 
 Run `ng new app-name` cmd to create angular project using cli
 
@@ -36,7 +36,7 @@ Run `ng serve` to start or compile your project like npm start in react then got
 
 Run `ng serve --open` to compile and open your project automatically in the browser
 
-##Generate your component by cli using command line
+## Generate your component by cli using command line
 
 Run `ng generate component comp-name` to generate folder of component with necessary component files this will create folder in your app folder by default
 
