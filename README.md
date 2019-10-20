@@ -52,11 +52,42 @@ Selector name must be unique for a component so it can not override other file e
 
 Selectors are not limited to select by element name but selector can be just like in css you can select element by attribut so selector can be select by attribute 
 
-selector:'app-server'           this is the example of selector by element name
+this is the example of selector by element name
+`selector:'app-server'`           
+`<app-server></app-server>`
 
-selector:'[app-server]'         this is the example of selector by attribute name
-<!-- <div app-servers></div> -->
+this is the example of selector by attribute name
+`selector:'[app-server]'` 
+`<div app-servers></div>`
+
+select by class name
+`selector: '.app-servers'` 
+`<div class="app-servers"></div>`
+
+selector by id and sudo selectors like hover and so on won't work because angular don't support them
+you typically you these element selector but their might be some cases where you need to use different selectors
+
+
+## Data Binding  (4 Forms)
  
-  
-selector: '.app-servers', //select by class name
-<div class="app-servers"></div>
+the communication between your typescript code (Business Login) and your template(Html) what the user sees
+
+## For Output Data We use
+
+1. String Interpolation `({{data}})`
+2. Property Binding `([property]="data")`
+
+e.g here disable is bind through property binding that get update dynamically on the bases of allowNewServer boolean value
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer">Add Server
+</button>
+
+## For React to user Events We use
+
+3. Event Binding `((event)="expression")`
+means execute code when ever event like onClick occurs
+
+## Additional form of data Binding where we combine both the directions 
+
+4. Two-Way-Binding `([ngModel]="data")`
+where we are able to react events and output somethings at the same time
