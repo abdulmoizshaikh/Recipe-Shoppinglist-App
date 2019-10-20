@@ -32,12 +32,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Run `ng new app-name` cmd to create angular project using cli
 
 Run `ng serve` to start or compile your project like npm start in react then goto localhost:4200 to check your server runing.
-                                        OR
+
 Run `ng serve --open` to compile and open your project automatically in the browser.
 
 ## Generate your component by cli using command line
 
 Run `ng generate component comp-name` to generate folder of component with necessary component files this will create folder in your app folder by default.
-                                        OR
+
 Run `ng g c comp-name` through shortcut command which do the same as above command.
 
