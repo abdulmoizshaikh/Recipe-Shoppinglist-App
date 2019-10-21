@@ -43,6 +43,8 @@ Run `ng g c comp-name` through shortcut command which do the same as above comma
 
 Run `ng g c recipes --skipTests=true` here --skipTests=true prevent the creation of a testing file if you don't need with generated component
 
+Run `ng g c recipes/recipeList --skipTests=true` to create new comp in sub folder
+
 ## Angular Concepts
  
 You have to add template in your component either is inline template or external using templateURL but you have atleast one type type of template in your component on the other hand selector and styleURLs dont have to be present in order to run or compile component they are optional
