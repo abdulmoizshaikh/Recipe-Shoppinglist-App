@@ -41,6 +41,7 @@ Run `ng generate component comp-name` to generate folder of component with neces
 
 Run `ng g c comp-name` through shortcut command which do the same as above command.
 
+Run `ng g c recipes --skipTests=true` here --skipTests=true prevent the creation of a testing file if you don't need with generated component
 
 ## Angular Concepts
  
