@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
   h3 {
     color: red;
   }`
-]
+  ]
 })
 
 export class AppComponent {
+  activeTab = 'recipes';
+
+  getActiveTab({ tabName }) {
+    this.activeTab = tabName;
+  }
 }
